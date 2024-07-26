@@ -5,7 +5,9 @@ const path = require('path');
 const app = express();
 const PORT = 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://instagram-story-frontend.onrender.com'
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const stories = [
